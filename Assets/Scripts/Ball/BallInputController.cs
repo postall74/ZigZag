@@ -6,15 +6,9 @@ public class BallInputController : MonoBehaviour
 
     public Vector3 BallDirection => _ballDirection;
 
-    private void Start()
-    {
-        _ballDirection = Vector3.left;
-    }
+    private void Start() => _ballDirection = Vector3.left;
 
-    private void Update()
-    {
-        HandleBallInputs();
-    }
+    private void Update() => HandleBallInputs();
 
     private void HandleBallInputs()
     {
@@ -24,11 +18,5 @@ public class BallInputController : MonoBehaviour
         }
     }
 
-    private void ChangeBallDirection() 
-    {
-        if (_ballDirection.x == -1)
-            _ballDirection = Vector3.forward;
-        else
-            _ballDirection = Vector3.left;
-    }
+    private void ChangeBallDirection() => _ballDirection = _ballDirection.x == -1 ? Vector3.forward : Vector3.left;
 }

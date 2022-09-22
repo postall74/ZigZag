@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundColorController : MonoBehaviour
@@ -18,10 +16,7 @@ public class GroundColorController : MonoBehaviour
         SetSmoothChangeColorMaterial();
     }
 
-    private void OnDestroy()
-    {
-        _material.color = _colors[0];
-    }
+    private void OnDestroy() =>  _material.color = _colors[0];
 
     private void SetColorChangeTime()
     {
@@ -42,8 +37,5 @@ public class GroundColorController : MonoBehaviour
             _colorIndex = 0;
     }
 
-    private void SetSmoothChangeColorMaterial()
-    {
-        _material.color = Color.Lerp(_material.color, _colors[_colorIndex], _lerpValue * Time.deltaTime);
-    }
+    private void SetSmoothChangeColorMaterial() => _material.color = Color.Lerp(_material.color, _colors[_colorIndex], _lerpValue * Time.deltaTime);
 }

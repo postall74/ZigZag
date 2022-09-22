@@ -9,15 +9,9 @@ public class CameraController : MonoBehaviour
     private Vector3 _targetPosition;
 
 
-    private void Start()
-    {
-        _offset = transform.position - _ballTransform.position;
-    }
+    private void Start() => _offset = transform.position - _ballTransform.position;
 
-    private void LateUpdate()
-    {
-        SetCameraSmoothFollow();
-    }
+    private void LateUpdate() => SetCameraSmoothFollow();
 
     private void SetCameraSmoothFollow()
     {
