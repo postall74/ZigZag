@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BallDataTransmiter
+public class BallDataTransmiter : MonoBehaviour
 {
     [SerializeField] BallInputController _ballInputController;
     
