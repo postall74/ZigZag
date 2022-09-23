@@ -8,7 +8,6 @@ public class CameraController : MonoBehaviour
     private Vector3 _offset;
     private Vector3 _targetPosition;
 
-
     private void Start() => _offset = transform.position - _ballTransform.position;
 
     private void LateUpdate() => SetCameraSmoothFollow();
