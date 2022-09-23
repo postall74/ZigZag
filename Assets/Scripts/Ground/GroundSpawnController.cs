@@ -14,9 +14,7 @@ public class GroundSpawnController : MonoBehaviour
     public void SetLastRoadObject(GameObject newRoadObject)
     {
         if (newRoadObject is null)
-        {
             throw new System.ArgumentNullException(nameof(newRoadObject));
-        }
 
         _lastRoadObject = newRoadObject;
     }
@@ -24,9 +22,7 @@ public class GroundSpawnController : MonoBehaviour
     public void CreateRandomRoad()
     {
         for (int i = 0; i < _roadLenght; i++)
-        {
             CreateNewRoad();
-        }
     }
 
     private void Start() => CreateRandomRoad();
@@ -42,7 +38,6 @@ public class GroundSpawnController : MonoBehaviour
                 new Vector3(_lastRoadObject.transform.position.x - 1.0f, _lastRoadObject.transform.position.y, _lastRoadObject.transform.position.z),
                 Quaternion.identity);
             SetLastRoadObject(_newRoadObject);
-
         }
         else
         {

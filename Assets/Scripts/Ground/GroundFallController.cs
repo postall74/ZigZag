@@ -5,8 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class GroundFallController : MonoBehaviour
 {
+    [SerializeField] private float _delayFall = 0.25f;
+
     private Rigidbody _rigidbody;
-    private readonly float _delayFall = 0.75f;
 
     public IEnumerator RoadDestruction()
     {
