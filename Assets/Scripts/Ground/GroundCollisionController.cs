@@ -9,6 +9,10 @@ public class GroundCollisionController : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag(Ball))
+        {
+            PlayerStats.AddScore();
+            Debug.Log($"{PlayerStats.Score}");
             _dataTransminter.SetRigidbodyValue();
+        }
     }
 }

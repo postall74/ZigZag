@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
 
     public static int AddScore()
     {
-        return  _score++;
+        return _score++;
     }
 
     public static void ChageLive(int value) => _live += value;
