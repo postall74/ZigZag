@@ -7,9 +7,6 @@ public class BallCollisionController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(BallCollision))
-        {
             PlayerStats.ChageLive(-1);
-            Debug.Log($"{PlayerStats.Live}");
-        }
     }
 }

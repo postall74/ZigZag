@@ -5,20 +5,11 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseUI;
 
-    public void OnRetry()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    public void OnRetry() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-    public void OnQuit()
-    {
-        Application.Quit();
-    }
+    public void OnQuit() => Application.Quit();
 
-    public void OnContinue()
-    {
-        Toggle();
-    }
+    public void OnContinue() => Toggle();
 
     private void Update()
     {
